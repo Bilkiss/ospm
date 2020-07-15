@@ -1,0 +1,7 @@
+// Background Mixins //
+@each $colors, $value in $theme-gradient-colors {
+	.bg-gradient-#{$colors} {
+    background: $value;
+		//background: theme-gradient-color($value);
+	}
+}

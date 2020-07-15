@@ -1,0 +1,136 @@
+/*
+.dropable-zone{
+  .smooth-dnd-container{
+!*    padding: .3em;
+    background-color: $gray-300;
+    border: 2px dashed $gray-400;
+    margin-right: .3em;*!
+  }
+  .card{
+    .card-body{
+      padding: 1rem!important;
+    }
+  }
+}
+
+
+.draggable-item{
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  width : 100%;
+  display: block;
+  background-color: #fff;
+  outline: 0;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-bottom: 2px;
+  margin-top: 2px;
+}
+
+.draggable-item-horizontal{
+  height: 300px;
+  padding: 10px;
+  line-height: 100px;
+  text-align: center;
+  !* width : 200px; *!
+  display: block;
+  background-color: #fff;
+  outline: 0;
+  border: 1px solid rgba(0,0,0,.125);
+  margin-right: 4px;
+}
+
+.form-ghost{
+  transition: 0.18s ease;
+  box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.08);
+}
+
+.form-ghost-drop{
+  box-shadow: 0 0 2px 5px rgba(0,0,0,0.0);
+}
+
+
+
+.dragging {
+  background-color: yellow;
+}
+
+.card-scene{
+  //padding: 50px;
+  !* background-color: #fff; *!
+}
+
+.card-container{
+  //width: 320px;
+  //padding: 10px;
+  //margin: 5px;
+  //margin-right: 45px;
+  //background-color: $gray-200;
+  //background-color: #f3f3f3;
+  padding: .3em;
+  background-color: rgba($gray-100, .5);
+  border: 1px dashed rgba($gray-100, .8);
+  margin-right: .5em;
+  border-radius: 6px;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
+}
+.smooth-dnd-draggable-wrapper{
+  &.animated[style]{
+    background-color: #5e7188!important;
+    transform: translate3d(0px, 0px, 0px)!important;
+  }
+}
+
+.card{
+  margin: 5px;
+  !* border: 1px solid #ccc; *!
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 1px 1px rgba(0,0,0,0.24);
+  padding: 10px;
+}
+
+.card-column-header{
+  //font-size: 18px;
+  margin: 1em;
+}
+
+.simple-page{
+  //max-width: 500px;
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.column-drag-handle{
+  cursor: move;
+  padding: 5px;
+}
+
+.card-ghost {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg)
+}
+
+.card-ghost-drop{
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg)
+}
+
+.opacity-ghost {
+  transition: all .18s ease;
+  opacity: 0.8;
+  cursor: ns-resize;
+  !* transform: rotateZ(5deg); *!
+  background-color: cornflowerblue;
+  box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.3);
+}
+
+.opacity-ghost-drop {
+  opacity: 1;
+  !* transform: rotateZ(0deg); *!
+  background-color: white;
+  box-shadow: 3px 3px 10px 3px rgba(0,0,0,0.0);
+}
+*/

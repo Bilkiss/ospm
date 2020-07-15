@@ -1,0 +1,138 @@
+<p class="h4">Project name: Blala</p>
+
+<div [ngStyle]="{ 'display': 'flex', 'justifyContent': 'stretch', 'marginTop': '50px', 'marginRight': '50px' }">
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload1" (drop)="onDropCollection('items1', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items1">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload2" (drop)="onDropCollection('items2', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items2">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload3" (drop)="onDropCollection('items3', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items3">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+</div>
+
+<!--<div class="simple-page">
+  <smooth-dnd-container>
+    <smooth-dnd-draggable>1sdadsadsadsa</smooth-dnd-draggable>
+    <smooth-dnd-draggable>2sdadsadsadsa</smooth-dnd-draggable>
+    <smooth-dnd-draggable>3sdadsadsadsa</smooth-dnd-draggable>
+    <smooth-dnd-draggable>4sdadsadsadsa</smooth-dnd-draggable>
+    <smooth-dnd-draggable>5sdadsadsadsa</smooth-dnd-draggable>
+  </smooth-dnd-container>
+</div>-->
+
+<!--<div class="row">
+  <div class="col-4">
+
+
+
+    <smooth-dnd-container (drop)="onDrop($event)">
+      <smooth-dnd-draggable *ngFor="let item of items">
+        <div class="draggable-item card">
+          <div class="card-body p-0">
+            <p>{{item.data}}</p>
+          </div>
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+</div>-->
+
+<!--<div [ngStyle]="{ 'display': 'flex', 'justifyContent': 'stretch', 'marginTop': '50px', 'marginRight': '50px' }">
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload1" (drop)="onDrop('items1', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items1">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload2" (drop)="onDrop('items2', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items2">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload3" (drop)="onDrop('items3', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items3">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+  <div [ngStyle]="{'marginLeft': '50px', 'flex': '1'}">
+    <smooth-dnd-container [groupName]="'1'" [getChildPayload]="getChildPayload4" (drop)="onDrop('items4', $event)">
+      <smooth-dnd-draggable *ngFor="let item of items4">
+        <div class="draggable-item">
+          {{item.data}}
+        </div>
+      </smooth-dnd-draggable>
+    </smooth-dnd-container>
+  </div>
+</div>-->
+
+<!--<div class="card-scene mt-3">
+  <smooth-dnd-container
+    [orientation]="'horizontal'"
+    (drop)="onColumnDrop($event)"
+    [dragHandleSelector]="'.column-drag-handle'"
+  >
+    <smooth-dnd-draggable *ngFor="let column of scene.children">
+      <div [ngClass]="column.props.className">
+        <div class="card-column-header">
+&lt;!&ndash;          <span class="column-drag-handle">&#x2630;</span>&ndash;&gt;
+          <h6 class="mb-0">
+            <small><i class="fa fa-bars mr-2"></i></small>
+            {{column.name}}
+          </h6>
+        </div>
+        <smooth-dnd-container class="dropable-zone"
+          [groupName]="'col'"
+          (drop)="onCardDrop(column.id, $event)"
+          [getChildPayload]="getCardPayload(column.id)"
+          [dragClass]="'card-ghost'"
+          [dropClass]="'card-ghost-drop'"
+          (dragStart)="dragStart($event)"
+          (dragEnd)="log('drag end', $event)"
+           [dragBeginDelay]="100"
+           [animationDuration]="500">
+
+          <smooth-dnd-draggable *ngFor="let card of column.children">
+            <div [ngClass]="card.props.className" [ngStyle]="card.props.style">
+              <div class="card-body">
+                <p class="mb-0">
+                  {{card.data}}
+                </p>
+              </div>
+            </div>
+          </smooth-dnd-draggable>
+        </smooth-dnd-container>
+      </div>
+    </smooth-dnd-draggable>
+  </smooth-dnd-container>
+</div>-->
